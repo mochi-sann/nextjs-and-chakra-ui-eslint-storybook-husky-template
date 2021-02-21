@@ -1,8 +1,8 @@
 import {
-  Link as ChakraLink,
+
   Heading,
-  Flex,
-  Center,
+
+
   Icon,
 } from "@chakra-ui/react"
 import { FaReact } from "react-icons/fa"
@@ -17,15 +17,8 @@ const Index = () => (
     {/* <Hero /> */}
 
     <Heading>
-      <Flex>
-        <ChakraLink isExternal href="https://chakra-ui.com">
-          Chakra-ui
-        </ChakraLink>{" "}
-        Template{" "}
-        <Center>
-          <Icon as={FaReact} w={10} h={10} color="#0693E3" />
-        </Center>{" "}
-      </Flex>
+      nextjs-and-chakra-ui-eslint-storybook-husky-template
+      <Icon as={FaReact} w={10} h={10} color="#0693E3" />
     </Heading>
 
     <DarkModeSwitch />
