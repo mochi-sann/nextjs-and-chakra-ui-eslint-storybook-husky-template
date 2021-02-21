@@ -18,6 +18,7 @@ const Index = () => (
 
     <Heading>
       nextjs-and-chakra-ui-eslint-storybook-husky-template
+      nextjs-and-chakra-ui-eslint-storybook-husky-template
       <Icon as={FaReact} w={10} h={10} color="#0693E3" />
     </Heading>
 
