@@ -20,7 +20,7 @@ const Layout = ({
   return (
     <Box minHeight="100vh">
       <Head>
-        <title>もちのさいと</title>
+        <title>{title}</title>
       </Head>
       {HiidenHeader ? null : <Header />}
 
