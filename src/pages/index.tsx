@@ -1,33 +1,39 @@
 import {
   Link as ChakraLink,
-  Text,
-  Code,
-  List,
-  ListIcon,
-  ListItem,
+  Heading,
+  Flex,
+  Center,
+  Icon,
 } from "@chakra-ui/react"
+import { FaReact } from "react-icons/fa"
 
-import dayjs from "dayjs"
+import Layout from "~/src/components/Layout"
+import { CTA } from "~/src/components/CTA"
 
-import { Container } from "../components/Container"
-import { Main } from "../components/Main"
 import { DarkModeSwitch } from "../components/DarkModeSwitch"
 
 const Index = () => (
-  <Container height="100vh">
+  <Layout>
     {/* <Hero /> */}
-    <Main></Main>
-    <p>
-      dayjs().format("YYYY/MM/DD HH:mm:ss")
-      {dayjs().format("YYYY/MM/DD HH:mm:ss")}
-    </p>
+
+    <Heading>
+      <Flex>
+        <ChakraLink isExternal href="https://chakra-ui.com">
+          Chakra-ui
+        </ChakraLink>{" "}
+        Template{" "}
+        <Center>
+          <Icon as={FaReact} w={10} h={10} color="#0693E3" />
+        </Center>{" "}
+      </Flex>
+    </Heading>
 
     <DarkModeSwitch />
     {/* <Footer>
       <Text>Next ❤️ Chakra</Text>
     </Footer> */}
-    {/* <CTA /> */}
-  </Container>
+    <CTA />
+  </Layout>
 )
 
 export default Index
