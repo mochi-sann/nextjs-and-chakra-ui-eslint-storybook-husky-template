@@ -33,6 +33,7 @@
   "lint-staged": {
     "*.@(ts|tsx)": [
       "yarn fix:prettier --no-verify ",
+      "yarn fix:eslint",
       "git add ."
     ]
   },
