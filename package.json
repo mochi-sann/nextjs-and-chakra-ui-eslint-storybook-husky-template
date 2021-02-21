@@ -24,14 +24,14 @@
     }
   },
   "push-hook": {
-    "./**/*.@(ts|tsx)": [
+    "./**/*.@(js,jsx,ts,tsx)": [
       "yarn fix",
       "type-check",
       "git add ."
     ]
   },
   "lint-staged": {
-    "./**/*.@(ts|tsx)": [
+    "./**/*.@(js,jsx,ts,tsx)": [
       "yarn fix",
       "git add ."
     ]
