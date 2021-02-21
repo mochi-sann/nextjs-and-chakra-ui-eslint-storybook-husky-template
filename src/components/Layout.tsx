@@ -1,5 +1,5 @@
 import React, { ReactNode } from "react"
-import { Box, Container, useColorMode } from "@chakra-ui/react"
+import { Box, Container } from "@chakra-ui/react"
 // import NextLink from "next/link"
 import Head from "next/head"
 
@@ -10,8 +10,8 @@ interface Props  {
   HiidenHeader?: boolean
 }
 
-const Layout = ({ children, title = "", HiidenHeader = false }: Props) => {
-  const { colorMode } = useColorMode()
+const Layout = ({ children, title = "タイトル", HiidenHeader = false }: Props) => {
+  // const { colorMode } = useColorMode()
   return (
     <Box minHeight="100vh">
       <Head>

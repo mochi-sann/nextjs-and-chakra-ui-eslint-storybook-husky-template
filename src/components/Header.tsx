@@ -5,7 +5,7 @@ import NextLink from "next/link"
 
 import { MoonIcon, SunIcon } from "@chakra-ui/icons"
 
-type HeaderProps = {
+export interface HeaderProps  {
   position?: any
 }
 

@@ -1,5 +1,7 @@
 import { extendTheme } from "@chakra-ui/react"
 import { createBreakpoints } from "@chakra-ui/theme-tools"
+import { mode } from "@chakra-ui/theme-tools"
+import type { AppProps /*, AppContext */ } from "next/app"
 
 const fonts = { mono: `'Menlo', monospace` }
 
@@ -11,6 +13,12 @@ const breakpoints = createBreakpoints({
 })
 
 const theme = extendTheme({
+  global: (props: AppProps) => ({
+    body: {
+      color: mode("#16161D", "#f8f8f2")(props),
+      bg: mode("white", "#282a36")(props),
+    },
+  }),
   colors: {
     black: "#16161D",
   },

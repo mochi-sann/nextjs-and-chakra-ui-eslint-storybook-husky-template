@@ -1,5 +1,6 @@
 const path = require("path")
 
+
 const toPath = (_path) => path.join(process.cwd(), _path)
 
 module.exports = {
@@ -9,6 +10,8 @@ module.exports = {
     "@storybook/addon-a11y",
     "@storybook/addon-toolbars",
     "@storybook/addon-controls",
+    "@whitespace/storybook-addon-html",
+    "@storybook/addon-viewport",
   ],
   typescript: {
     reactDocgen: false,
