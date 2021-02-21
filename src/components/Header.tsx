@@ -1,15 +1,26 @@
 import React from "react"
-import { Flex, Box, Center, Heading, Container, useColorMode, useColorModeValue, Spacer, IconButton } from "@chakra-ui/react"
+import {
+  Flex,
+  Box,
+  Center,
+  Heading,
+  Container,
+  useColorMode,
+  useColorModeValue,
+  Spacer,
+  IconButton,
+  PositionProps,
+} from "@chakra-ui/react"
 import NextLink from "next/link"
 // import Image from "next/image"
 
 import { MoonIcon, SunIcon } from "@chakra-ui/icons"
 
-export interface HeaderProps  {
-  position?: any
-}
+// export interface HeaderProps {
 
-export default function Header({ position = "sticky" }: HeaderProps) {
+// }
+
+export default function Header({ position = "sticky" }: PositionProps) {
   const { colorMode, toggleColorMode } = useColorMode()
 
   return (
@@ -42,7 +53,13 @@ export default function Header({ position = "sticky" }: HeaderProps) {
           </NextLink>
           <Spacer />
           <Center>
-            <IconButton aria-label={colorMode === "light" ? "chenge Light mode" : "chenge Dark mode"} icon={colorMode === "light" ? <MoonIcon /> : <SunIcon />} onClick={toggleColorMode} />
+            <IconButton
+              aria-label={
+                colorMode === "light" ? "chenge Light mode" : "chenge Dark mode"
+              }
+              icon={colorMode === "light" ? <MoonIcon /> : <SunIcon />}
+              onClick={toggleColorMode}
+            />
           </Center>
         </Flex>
       </Container>

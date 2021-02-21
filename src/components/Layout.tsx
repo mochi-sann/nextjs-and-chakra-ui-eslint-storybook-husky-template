@@ -4,13 +4,18 @@ import { Box, Container } from "@chakra-ui/react"
 import Head from "next/head"
 
 import Header from "~/src/components/Header"
-interface Props  {
+
+interface Props {
   children?: ReactNode
   title?: string
   HiidenHeader?: boolean
 }
 
-const Layout = ({ children, title = "タイトル", HiidenHeader = false }: Props) => {
+const Layout = ({
+  children,
+  title = "タイトル",
+  HiidenHeader = false,
+}: Props) => {
   // const { colorMode } = useColorMode()
   return (
     <Box minHeight="100vh">
@@ -21,9 +26,7 @@ const Layout = ({ children, title = "タイトル", HiidenHeader = false }: Prop
 
       {/* 本文 */}
       <Container maxW="800px">{children}</Container>
-      <Box h="200px"></Box>
-
-      
+      <Box h="200px" />
     </Box>
   )
 }

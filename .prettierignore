@@ -3,7 +3,3 @@ out
 public/sw.js
 public/sw.js.map
 public/workbox.*.js
-.eslintrc.js
-.eslintignore
-.prettierignore
-.prettierrc.js

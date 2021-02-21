@@ -1,32 +1,48 @@
 module.exports = {
+  root: true,
   env: {
-    browser: true,
-    es2021: true,
+    es2020: true,
     node: true,
   },
-  extends: [
-    "plugin:react/recommended",
-    "airbnb",
-    "plugin:prettier/recommended",
-  ],
   parser: "@typescript-eslint/parser",
   parserOptions: {
-    ecmaFeatures: {
-      jsx: true,
-    },
-    ecmaVersion: 12,
     sourceType: "module",
+    ecmaVersion: 2020,
+    tsconfigRootDir: __dirname,
+    project: ["./tsconfig.json"],
   },
-  plugins: ["react", "@typescript-eslint"],
+  plugins: ["@typescript-eslint"],
+  settings: {
+    react: {
+      version: "latest",
+    },
+  },
+
+  extends: [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:prettier/recommended",
+    "prettier/@typescript-eslint",
+  ],
   rules: {
+    "@typescript-eslint/explicit-module-boundary-types": "off",
     "react/jsx-filename-extension": [
       1,
       {
-        extensions: [".jsx", "tsx"],
+        extensions: [".jsx", ".tsx"],
+      },
+    ],
+    "react/jsx-filename-extension": [
+      1,
+      {
+        extensions: [".js", ".jsx", ".tsx", "ts"],
       },
     ], // should add ".ts" if typescript project
     "no-useless-escape": "off",
-
+    "react/react-in-jsx-scope": "off",
+    "react/prop-types": "off",
     "no-use-before-define": [
       "off",
       {
@@ -35,14 +51,16 @@ module.exports = {
       },
     ],
     "prettier/prettier": [
-      "error",
+      2,
       {
-        jsxBracketSameLine: false,
+        semi: false,
+        arrowParens: "always",
         singleQuote: false,
+        jsxBracketSameLine: false,
         tabWidth: 2,
         trailingComma: "es5",
         useTabs: false,
-        printWidth: 800,
+        printWidth: 80,
       },
     ],
   },

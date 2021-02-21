@@ -1,7 +1,7 @@
 import { extendTheme } from "@chakra-ui/react"
-import { createBreakpoints } from "@chakra-ui/theme-tools"
-import { mode } from "@chakra-ui/theme-tools"
-import type { AppProps /*, AppContext */ } from "next/app"
+import { createBreakpoints, mode } from "@chakra-ui/theme-tools"
+
+import type { AppProps /* , AppContext */ } from "next/app"
 
 const fonts = { mono: `'Menlo', monospace` }
 
