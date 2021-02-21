@@ -1,0 +1,11 @@
+.next
+out
+public/sw.js
+public/sw.js.map
+public/workbox.*.js
+__tests__
+cypress/integration/sample_spec.ts
+.eslintrc.js
+.eslintignore
+.prettierignore
+.prettierrc.js
