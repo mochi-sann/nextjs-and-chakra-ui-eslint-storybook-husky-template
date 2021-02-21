@@ -1,6 +1,6 @@
 import { Link as ChakraLink, Button } from "@chakra-ui/react"
 
-import { Container } from "./Container"
+import { Container } from "~/src/components/Container"
 
 export const CTA = () => (
   <Container
@@ -19,7 +19,7 @@ export const CTA = () => (
 
     <ChakraLink
       isExternal
-      href="https://github.com/vercel/next.js/blob/canary/examples/with-chakra-ui-typescript"
+      href="https://github.com/mochi-sann/nextjs-and-chakra-ui-eslint-storybook-husky-template"
       flexGrow={3}
       mx={2}
     >
