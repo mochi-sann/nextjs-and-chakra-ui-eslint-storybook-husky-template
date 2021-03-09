@@ -1,4 +1,4 @@
-import { extendTheme } from "@chakra-ui/react"
+import { extendTheme, ThemeConfig } from "@chakra-ui/react"
 import { createBreakpoints, mode } from "@chakra-ui/theme-tools"
 
 import type { AppProps /* , AppContext */ } from "next/app"
@@ -11,6 +11,10 @@ const breakpoints = createBreakpoints({
   lg: "64em",
   xl: "80em",
 })
+const config: ThemeConfig = {
+  initialColorMode: "dark",
+  useSystemColorMode: true,
+}
 
 const theme = extendTheme({
   global: (props: AppProps) => ({
@@ -24,6 +28,7 @@ const theme = extendTheme({
   },
   fonts,
   breakpoints,
+  config,
 })
 
 export default theme
